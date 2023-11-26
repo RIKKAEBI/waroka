@@ -1,0 +1,11 @@
+services:
+  app:
+    image: node:20
+    volumes:
+      - .:/root/app
+    working_dir: /root/app
+    environment:
+      CHOKIDAR_USEPOLLING: true
+    tty: true
+    ports:
+      - 4200:4200
